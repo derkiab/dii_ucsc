@@ -1,5 +1,5 @@
 <svg viewBox="0 0 3500 1000" xmlns="http://www.w3.org/2000/svg" {{ $attributes }}>
-    <g transform="translate(0.000000,1181.000000) scale(0.1,-0.1)"
+    <g transform="translate(-200.000000,1000.000000) scale(0.1,-0.1)"
  stroke="none">
 <path  d="M7870 7193 c-93 -32 -180 -115 -236 -224 -40 -79 -75 -216 -81 -319
 l-6 -96 -106 -33 c-416 -130 -793 -447 -987 -833 -123 -245 -184 -511 -184
