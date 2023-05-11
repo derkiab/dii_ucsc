@@ -20,6 +20,29 @@ $(document).ready(function () {
 
     });
 });
+$(document).ready(function () {
+    $('#academics-table').DataTable({
+        dom: 'lfrtip',
+
+        language: {
+            url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
+        },
+
+
+    });
+});
+
+$(document).ready(function () {
+    $('#administratives-table').DataTable({
+        dom: 'lfrtip',
+
+        language: {
+            url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
+        },
+
+
+    });
+});
 
 $(document).on('click', '.delete-user', function (e) {
     e.preventDefault();

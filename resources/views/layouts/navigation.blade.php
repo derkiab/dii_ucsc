@@ -56,10 +56,10 @@
                             </x-slot>
 
                             <x-slot name="content">
-                                <x-dropdown-link :href="route('profile.edit')">
+                                <x-dropdown-link :href="route('academics.index')">
                                     {{ __('Académicos') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link :href="route('profile.edit')">
+                                <x-dropdown-link :href="route('administratives.index')">
                                     {{ __('Administrativos') }}
                                 </x-dropdown-link>
                                 <x-dropdown-link :href="route('profile.edit')">
