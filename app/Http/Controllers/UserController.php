@@ -34,7 +34,7 @@ class UserController extends Controller
 
             'name' => 'required',
             'email' => 'required|unique:users,email',
-            'password' => 'required|string|min:8|confirmed'
+
 
         ]);
 
@@ -42,7 +42,7 @@ class UserController extends Controller
 
             'name' => $request->get('name'),
             'email' => $request->get('email'),
-            'password' => bcrypt($request->get('password'))
+            'password' => bcrypt($request->get('name').'1234')
 
 
         ]);
@@ -50,7 +50,7 @@ class UserController extends Controller
         $user->save();
 
 
-        return redirect('admin/users')->with('success', 'Usuario creado exitosamente!');
+        return redirect('users')->with('success', 'Usuario creado exitosamente!');
     }
 
     /**
@@ -61,18 +61,22 @@ class UserController extends Controller
         //
     }
 
-    /**
+      /**
      * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(User $id)
     {
-        //
+        $user = User::find($id);
+        return view('users.edit', compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -80,8 +84,12 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+
+        return response()->json(['success' => true]);
+
     }
 }
