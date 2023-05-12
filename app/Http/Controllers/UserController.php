@@ -42,7 +42,7 @@ class UserController extends Controller
 
             'name' => $request->get('name'),
             'email' => $request->get('email'),
-            'password' => bcrypt($request->get('name').'1234')
+            'password' => md5(bcrypt($request->get('name').'1234'))
 
 
         ]);
