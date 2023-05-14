@@ -103,6 +103,55 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $('#careers-table').DataTable({
+        dom: 'lfrtip',
+
+        language: {
+            url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
+        },
+
+
+    });
+});
+
+$(document).ready(function () {
+    $('#dependencies-table').DataTable({
+        dom: 'lfrtip',
+
+        language: {
+            url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
+        },
+
+
+    });
+});
+
+$(document).ready(function () {
+    $('#centers-table').DataTable({
+        dom: 'lfrtip',
+
+        language: {
+            url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
+        },
+
+
+    });
+});
+
+$(document).ready(function () {
+    $('#departments-table').DataTable({
+        dom: 'lfrtip',
+
+        language: {
+            url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
+        },
+
+
+    });
+});
+
+
 $(document).on('click', '.delete-user', function (e) {
     e.preventDefault();
     var id = $(this).data('id');

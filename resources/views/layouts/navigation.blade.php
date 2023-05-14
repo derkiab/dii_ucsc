@@ -73,16 +73,16 @@
                             </x-slot>
 
                             <x-slot name="content">
-                                <x-dropdown-link :href="route('academics.index')">
+                                <x-dropdown-link :href="route('careers.index')">
                                     {{ __('Carreras') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link :href="route('administratives.index')">
+                                <x-dropdown-link :href="route('centers.index')">
                                     {{ __('Centros') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link :href="route('post_students.index')">
+                                <x-dropdown-link :href="route('dependencies.index')">
                                     {{ __('Dependencias') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link :href="route('post_students.index')">
+                                <x-dropdown-link :href="route('departments.index')">
                                     {{ __('Departamentos') }}
                                 </x-dropdown-link>
 
