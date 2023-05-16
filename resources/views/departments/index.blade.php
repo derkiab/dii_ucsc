@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dependencias') }}
+            {{ __('Departamentos') }}
         </h2>
     </x-slot>
 
@@ -32,10 +32,10 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <x-add-button class="mb-10">
-                        {{ __('Añadir dependencia') }}
+                        {{ __('Añadir departamento') }}
                     </x-add-button>
 
-                    <table id="dependencies-table" class="display">
+                    <table id="departments-table" class="display">
                         <thead>
                             <tr>
 
@@ -51,6 +51,11 @@
                                 </th>
                                 <th>
                                     <div class="flex justify-center items-center">
+                                        Dependencia
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="flex justify-center items-center">
                                         Acciones
                                     </div>
                                 </th>
@@ -62,7 +67,7 @@
 
                                     <td class="text-center">{{ $department->identificador }}</td>
                                     <td class="text-center">{{ $department->nombre }}</td>
-
+                                    <td class="text-center">{{ $department->dependencia }}</td>
                                     <td class="text-center">
                                         <a href=""
                                             class="inline-flex items-center px-2.5 py-1.5 border border-blue-500 text-blue-500 rounded-md hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
