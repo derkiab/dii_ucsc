@@ -30,6 +30,11 @@
         <div class="max-w-lg mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
+                    <h5 class="font-sans text-lg text-gray-800 dark:text-gray-200 leading-tight">
+                        {{ __('Nota: Al crear un usuario su contraseña sera su nombre + 1234, por ejemplo Jose1234. 
+                            Se recomienda que el usuario cambie la contraseña.') }}
+                    </h5>
+                    <br>
                     <form method="POST" action="{{ route('users.store') }}">
                         @csrf
                         <!-- Nombre -->
