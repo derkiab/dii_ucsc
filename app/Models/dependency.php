@@ -14,4 +14,9 @@ class dependency extends Model
         'nombre',
 
     ];
+
+    public function careers()
+    {
+        return $this->hasMany(career::class);
+    }
 }

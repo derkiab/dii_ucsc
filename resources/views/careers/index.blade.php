@@ -28,7 +28,7 @@
         </script>
     @endif
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <x-add-button class="mb-10">
@@ -55,11 +55,7 @@
                                     </div>
                                 </th>
 
-                                <th>
-                                    <div class="flex justify-center items-center">
-                                        Tipo de estudio
-                                    </div>
-                                </th>
+
                                 <th>
                                     <div class="flex justify-center items-center">
                                         Estado
@@ -74,12 +70,12 @@
                         </thead>
                         <tbody>
                             @foreach ($careers as $career)
-                                <tr>
+                                <tr class="">
 
                                     <td class="text-center">{{ $career->nombre }}</td>
                                     <td class="text-center">{{ $career->dependencia }}</td>
                                     <td class="text-center">{{ $career->sede }}</td>
-                                    <td class="text-center">{{ $career->tipo_estudio }}</td>
+
                                     <td class="text-center">{{ $career->estado }}</td>
 
 
@@ -112,6 +108,8 @@
                                         </form>
                                     </td>
                                 </tr>
+
+
                             @endforeach
                         </tbody>
 

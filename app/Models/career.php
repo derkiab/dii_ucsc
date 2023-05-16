@@ -18,4 +18,9 @@ class career extends Model
 
     ];
 
+    public function dependencies()
+    {
+        return $this->belongsTo(dependency::class, 'dependencia');
+    }
+
 }
