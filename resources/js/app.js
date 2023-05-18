@@ -4,10 +4,18 @@ import Alpine from 'alpinejs';
 import 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js';
 import 'https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js';
 import Swal from 'sweetalert2';
+import {createApp} from 'vue/dist/vue.esm-bundler.js';
+import Home from './Home.vue';
+
 
 window.Alpine = Alpine;
 
 Alpine.start();
+
+const app = createApp({});
+
+app.component('home-component', Home);
+app.mount("#app");
 
 $(document).ready(function () {
     $('#users-table').DataTable({
