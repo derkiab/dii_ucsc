@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
+import DataTables from 'datatables.net';
 
 export default defineConfig({
     plugins: [
+
         vue(),
         laravel({
             input: [
@@ -12,6 +14,10 @@ export default defineConfig({
             ],
             refresh: true,
         }),
+
     ],
+    optimizeDeps: {
+        include: ['datatables.net'],
+      },
 
 });
