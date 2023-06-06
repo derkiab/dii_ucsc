@@ -31,9 +31,9 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <x-add-button class="mb-10">
+                    <x-add-button-department class="mb-10">
                         {{ __('Añadir departamento') }}
-                    </x-add-button>
+                    </x-add-button-department>
 
                     <table id="departments-table" class="display">
                         <thead>

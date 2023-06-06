@@ -31,7 +31,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <x-add-button class="mb-10">
+                    <x-add-button-dependency class="mb-10">
                         {{ __('Añadir dependencia') }}
                     </x-add-button>
 
@@ -74,13 +74,13 @@
                                             </svg>
                                             Editar
                                         </a>
-                                        <form action="" method="POST"
+                                        <form action="{{route('dependencies.destroy', $dependency->id)}}" method="POST"
                                             class="inline">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit"
-                                                class="inline-flex items-center px-2.5 py-1.5 border border-red-500 text-red-500 rounded-md hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 delete-user"
-                                                data-id="">
+                                                class="inline-flex items-center px-2.5 py-1.5 border border-red-500 text-red-500 rounded-md hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 delete-dependency"
+                                                data-id="{{$dependency->id}}">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5"
                                                     viewBox="0 0 20 20" fill="currentColor">
                                                     <path fill-rule="evenodd"

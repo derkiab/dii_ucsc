@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\dependency;
 use App\Models\department;
 use Illuminate\Http\Request;
 
@@ -11,9 +11,10 @@ class DepartmentController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
+    {   
+        $dependencies = dependency::all();
         $departments = department::all();
-        return view('departments.index',compact('departments'));
+        return view('departments.index',compact('departments','dependencies'));
     }
 
     /**
@@ -21,7 +22,7 @@ class DepartmentController extends Controller
      */
     public function create()
     {
-        //
+        return response(view('departments.create'));
     }
 
     /**

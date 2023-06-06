@@ -35,9 +35,9 @@
                         <home-component></home-component>
                     </div>
 
-                    <x-add-button class="mb-10">
+                    <x-add-button-publication class="mb-10">
                         {{ __('Añadir Publicación') }}
-                    </x-add-button>
+                    </x-add-button-publication>
 
                     <table id="publications-table" class="display">
                         <thead>
@@ -45,7 +45,7 @@
 
                                 <th>
                                     <div class="flex justify-center items-center">
-                                        Doi
+                                        DOI
                                     </div>
                                 </th>
                                 <th>
@@ -72,6 +72,11 @@
                                 <th>
                                     <div class="flex justify-center items-center">
                                         Journal
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="flex justify-center items-center">
+                                        Acciones
                                     </div>
                                 </th>
                             </tr>

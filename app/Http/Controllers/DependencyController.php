@@ -22,7 +22,7 @@ class DependencyController extends Controller
      */
     public function create()
     {
-        //
+        return response(view('dependencies.create'));
     }
 
     /**
@@ -30,7 +30,27 @@ class DependencyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+
+            'identificador' => 'required|max:4|string|regex:/^(?!(?:\D*\d){4}).*$/',
+            'nombre' => 'required|unique:dependencies|string',
+
+
+        ]);
+
+        $dependency = new dependency([
+
+            'identificador' => $request->get('identificador'),
+            'nombre' => $request->get('nombre'),
+            
+
+
+        ]);
+
+        $dependency->save();
+
+
+        return redirect('dependencies')->with('success', 'Dependencia creado exitosamente!');
     }
 
     /**
@@ -60,8 +80,11 @@ class DependencyController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(dependency $dependency)
+    public function destroy($id)
     {
-        //
+        $dependency = dependency::find($id);
+        $dependency->delete();
+
+        return response()->json(['success' => true]);
     }
 }

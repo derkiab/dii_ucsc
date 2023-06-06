@@ -19,4 +19,8 @@ class part_time extends Model
 
 
     ];
+    public function publications()
+    {
+        return $this->belongsToMany(Publication::class, 'authors', 'rut', 'doi');
+    }
 }
