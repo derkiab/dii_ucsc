@@ -3,18 +3,23 @@ import './bootstrap';
 import Alpine from 'alpinejs';
 import 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js';
 import DataTables from 'datatables.net';
+import { Select, initTE, Ripple } from "tw-elements";
 
+  
+  
 import Swal from 'sweetalert2';
 
 
 
 
-
-
+initTE({ Ripple });
+initTE({ Select });
 $(document).ready(function () {
     window.Alpine = Alpine;
 
     Alpine.start();
+
+
 
     new DataTables('#careers-table', {
         dom: 'lfrtip',
@@ -31,6 +36,14 @@ $(document).ready(function () {
         },
     });
     new DataTables('#academics-table', {
+        dom: 'lfrtip',
+
+        language: {
+            url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json'
+        },
+    });
+
+    new DataTables('#academics-table2', {
         dom: 'lfrtip',
 
         language: {
@@ -183,6 +196,8 @@ $(document).ready(function () {
             }
         });
     });
+
+    
 });
 
 

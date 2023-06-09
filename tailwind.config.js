@@ -8,6 +8,8 @@ module.exports = {
         './resources/views/**/*.blade.php',
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
+        "./src/**/*.{html,js}",
+        './node_modules/tw-elements/dist/js/**/*.js',
     ],
 
     theme: {
@@ -22,5 +24,6 @@ module.exports = {
         require('@tailwindcss/typography'),
         require('@tailwindcss/forms'),
         require('@tailwindcss/aspect-ratio'),
+        require('tw-elements/dist/plugin.cjs'),
       ],
 };

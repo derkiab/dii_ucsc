@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\publication;
+use App\Models\Academic;
+use App\Models\Administrative;
+use App\Models\post_student;
+use App\Models\pre_student;
+use App\Models\researcher;
+use App\Models\part_time;
 use Illuminate\Http\Request;
 
 class PublicationController extends Controller
@@ -20,8 +26,16 @@ class PublicationController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {
-        return response(view('publications.create'));
+    {   
+        $academics = Academic::all();
+        $administratives = Administrative::all();
+        $part_times = part_time::all();
+        $post_students = post_student::all();
+        $pre_students = pre_student::all();
+        $researchers = researcher::all();
+
+
+        return response(view('publications.create',compact('academics','administratives','part_times','post_students','pre_students','researchers')));
     }
 
     /**
